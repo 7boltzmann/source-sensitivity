@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "source-sensitivity",
+	"version": "${version}",
+	"name": "Source Sensitivity",
+	"description": "A Fabric mod that converts Source Engine Sensitivity into Minecraft Precisely.",
+	"authors": [
+		"7boltzmann",
+		"rbasamoyai"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod",
+		"discord": "@7boltzmann"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/source-sensitivity/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.boltzmann7.SourceSensitivity"
+		],
+		"client": [
+			"com.boltzmann7.client.SourceSensitivityClient"
+		]
+	},
+	"mixins": [
+		"source-sensitivity.mixins.json",
+		{
+			"config": "source-sensitivity.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
